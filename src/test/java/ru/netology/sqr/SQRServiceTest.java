@@ -9,8 +9,8 @@ public class SQRServiceTest {
     public void squaresInRange() {
         SQRService service = new SQRService();
 
-        int actual = service.countSquares(900);
-        int expected = 20;
+        int actual = service.countSquares(100, 900);
+        int expected = 21;
 
         Assertions.assertEquals(expected, actual);
     }
@@ -19,8 +19,8 @@ public class SQRServiceTest {
     public void squaresBelowRange() {
         SQRService service = new SQRService();
 
-        int actual = service.countSquares(-100);
-        int expected = 0;
+        int actual = service.countSquares(-100, 900);
+        int expected = 21;
 
         Assertions.assertEquals(expected, actual);
 
@@ -30,7 +30,7 @@ public class SQRServiceTest {
     public void squaresAboveRange() {
         SQRService service = new SQRService();
 
-        int actual = service.countSquares(1_000);
+        int actual = service.countSquares(100, 1_000);
         int expected = 22;
 
         Assertions.assertEquals(expected, actual);
